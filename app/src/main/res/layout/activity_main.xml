@@ -6,13 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="292dp"
+            android:layout_height="221dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/findimg" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12sp"
+            android:text="title"
+            android:textAlignment="center"
+            android:textSize="60sp" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12sp"
+            android:text="subtitle"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="276dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:autofillHints="mau cari"
+            android:iconifiedByDefault="false"
+            android:queryHint="mau cari apa nih"
+            android:saveEnabled="false" />
+
+        <ImageButton
+            android:id="@+id/randomBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_shuffle_24" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
