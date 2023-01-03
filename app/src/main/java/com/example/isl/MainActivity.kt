@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
      val TAG = "MainActivity"
     private lateinit var binding: ActivityMainBinding
 
-    private lateinit var searchView: SearchView
+    lateinit var searchView: SearchView
     private lateinit var randomBtn: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
