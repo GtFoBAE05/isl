@@ -35,8 +35,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="12sp"
+            android:background="#086E7D"
+            android:ellipsize="middle"
+            android:fadingEdge="none"
             android:text="title"
             android:textAlignment="center"
+            android:textColor="#FFF89A"
             android:textSize="60sp" />
 
         <TextView
@@ -55,15 +59,17 @@
             android:layout_height="38dp"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            android:autofillHints="mau cari"
             android:iconifiedByDefault="false"
             android:queryHint="mau cari apa nih"
-            android:saveEnabled="false" />
+            android:saveEnabled="false" >
+
+        </SearchView>
 
         <ImageButton
             android:id="@+id/randomBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             app:srcCompat="@drawable/ic_baseline_shuffle_24" />
 
     </LinearLayout>
