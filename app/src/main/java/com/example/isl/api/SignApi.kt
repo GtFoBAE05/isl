@@ -8,12 +8,10 @@ import retrofit2.http.Path
 
 interface SignApi {
 
-    @GET("/randomsign")
+    @GET("/random")
     fun getRandomSign(): Call<Sign>
 
-
-
-    @GET("/word/{cari}")
-    fun getSign(@Path("cari") cari:String?=null):Call<Sign>
+    @GET("/find/{name}")
+    fun getSign(@Path("name") name:String?=null):Call<Sign>
 
 }

@@ -1,13 +1,10 @@
 package com.example.isl
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.SearchView
-import android.widget.TextView
+import android.widget.*
 import com.bumptech.glide.Glide
 import com.example.isl.api.Sign
 import com.example.isl.api.instance
@@ -87,10 +84,16 @@ class MainActivity : AppCompatActivity() {
     fun getSign(cari:String){
         instance.instances.getSign(cari).enqueue(object :Callback<Sign> {
             override fun onResponse(call: Call<Sign>, response: Response<Sign>) {
-                val intent = Intent(this@MainActivity, wordDetailActivity::class.java)
-                intent.putExtra("cari", cari)
 
-                startActivity(intent)
+                if(response.isSuccessful()){
+                    val intent = Intent(this@MainActivity, wordDetailActivity::class.java)
+                    intent.putExtra("cari", cari)
+
+                    startActivity(intent)
+                }else{
+                    Toast.makeText(this@MainActivity,"Kata tersebut tidak ditemukan",Toast.LENGTH_LONG).show()
+                }
+
 
             }
 
